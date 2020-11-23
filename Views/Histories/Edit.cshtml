@@ -1,0 +1,69 @@
+﻿@model WebDb1.Models.History
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>History</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="EmployeeNumber" class="control-label"></label>
+                <input asp-for="EmployeeNumber" class="form-control" />
+                <span asp-validation-for="EmployeeNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="YearsInCurrentRole" class="control-label"></label>
+                <input asp-for="YearsInCurrentRole" class="form-control" />
+                <span asp-validation-for="YearsInCurrentRole" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LastPromotionYears" class="control-label"></label>
+                <input asp-for="LastPromotionYears" class="form-control" />
+                <span asp-validation-for="LastPromotionYears" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ManagerYears" class="control-label"></label>
+                <input asp-for="ManagerYears" class="form-control" />
+                <span asp-validation-for="ManagerYears" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Type" class="control-label"></label>
+                <input asp-for="Type" class="form-control" />
+                <span asp-validation-for="Type" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WorkingYears" class="control-label"></label>
+                <input asp-for="WorkingYears" class="form-control" />
+                <span asp-validation-for="WorkingYears" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TrainingTime" class="control-label"></label>
+                <input asp-for="TrainingTime" class="form-control" />
+                <span asp-validation-for="TrainingTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AccessLevel" class="control-label"></label>
+                <input asp-for="AccessLevel" class="form-control" />
+                <span asp-validation-for="AccessLevel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
